@@ -63,7 +63,44 @@ namespace Assignment6
         public string Description
         {
             get { return description; }
-            set { description = value; }
+            set
+            {
+             if (!string.IsNullOrEmpty(value))
+                 description = value;
+            }
+        }
+        /// <summary>
+        /// get date format into hour, and minute into string
+        /// </summary>
+        /// <returns></returns>
+        private string GetTimeString()
+        {
+            string time = string.Format("{0}: {1}", date.Hour.ToString("00"),
+                date.Minute.ToString("00"));
+
+            return time;
+        }
+
+        /// <summary>
+        /// replace the proirity list underscore to an empty string
+        /// </summary>
+        /// <returns></returns>
+        public string GetPriorityString()
+        {
+            string txtOut = Enum.GetName(typeof(PriorityType), priority);
+            txtOut = txtOut.Replace("_", " ");
+            return txtOut;
+        }
+
+        /// <summary>
+        /// an alternative way to format into a string
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            string txtOut = $"{date.ToLongDateString(),-25} {GetTimeString(),12} {" ", 6} {GetPriorityString(),-16} {description,-20}";
+
+            return txtOut;
         }
     }
 }
