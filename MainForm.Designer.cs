@@ -36,6 +36,7 @@
             this.saveDataFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitAltF4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblDateTimm = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +55,10 @@
             this.lstTask = new System.Windows.Forms.ListBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblClock = new System.Windows.Forms.Label();
+            this.clockTimer = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.groupBoxTodo.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +124,12 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.aboutToolStripMenuItem.Text = "About....";
             // 
             // contextMenuStrip1
             // 
@@ -192,6 +202,7 @@
             // 
             // groupBoxTodo
             // 
+            this.groupBoxTodo.Controls.Add(this.lblClock);
             this.groupBoxTodo.Controls.Add(this.btnDelete);
             this.groupBoxTodo.Controls.Add(this.btnChange);
             this.groupBoxTodo.Controls.Add(this.lblDescription);
@@ -206,6 +217,7 @@
             this.groupBoxTodo.TabIndex = 8;
             this.groupBoxTodo.TabStop = false;
             this.groupBoxTodo.Text = "To do";
+            this.groupBoxTodo.Enter += new System.EventHandler(this.groupBoxTodo_Enter);
             // 
             // btnDelete
             // 
@@ -282,11 +294,19 @@
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // aboutToolStripMenuItem
+            // lblClock
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About....";
+            this.lblClock.AutoSize = true;
+            this.lblClock.Location = new System.Drawing.Point(486, 174);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(0, 13);
+            this.lblClock.TabIndex = 7;
+            // 
+            // clockTimer
+            // 
+            this.clockTimer.Enabled = true;
+            this.clockTimer.Interval = 1000;
+            this.clockTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainForm
             // 
@@ -303,7 +323,7 @@
             this.Controls.Add(this.lblDateTimm);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "To do reminder by ";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -344,6 +364,10 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Label lblClock;
+        private System.Windows.Forms.Timer clockTimer;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }
 

@@ -216,5 +216,16 @@ namespace Assignment6
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToLongTimeString();
+
+        }
+
+        private void groupBoxTodo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
