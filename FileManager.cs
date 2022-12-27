@@ -50,5 +50,64 @@ namespace Assignment6
             }
             return ok;
         }
+
+        public bool ReadTaskListFrFile(List<Task> tasklist, string fileName)
+        {
+            bool ok = true;
+
+            StreamReader reader = null;
+
+            try
+            {
+                if (tasklist != null)
+                    tasklist.Clear();
+                else
+                    tasklist = new List<Task>();
+
+                reader = new StreamReader(fileName);
+
+                string versionTest = reader.ReadLine();
+                double version = double.Parse(reader.ReadLine());
+
+                if ((versionTest == fileVersionToken) && (version == fileVersionNr))
+                {
+                    int count = int.Parse(reader.ReadLine());
+                    for (int i = 0; i < count; i++)
+                    {
+                        Task task = new Task();
+                        task.Description = reader.ReadLine();
+                        task.Priority = (PriorityType)Enum.Parse(typeof(PriorityType), reader.ReadLine());
+
+                        //read only objects
+                        int year = 0, motnth = 0, day = 0;
+                        int hour = 0, minute = 0, second = 0;
+
+                        year = int.Parse(reader.ReadLine());
+                        day = int.Parse(reader.ReadLine());
+                        hour = int.Parse(reader.ReadLine());
+                        minute = int.Parse(reader.ReadLine());
+                        second = int.Parse(reader.ReadLine());
+
+                        task.DateAndTime = new DateTime(year, motnth, day, hour, minute, second);
+
+                        tasklist.Add(task);
+                    }
+                }
+                else
+                    ok = false;
+            }
+            catch
+            {
+                ok = false;
+            }
+
+            finally
+            {
+                if (reader != null)
+                    reader.Close();
+            }
+
+            return ok;
+        }
     }
 }

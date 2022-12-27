@@ -3,9 +3,9 @@ C:\Users\aisha\Documents\Module6\Assignment6\bin\Debug\Assignment6.exe
 C:\Users\aisha\Documents\Module6\Assignment6\bin\Debug\Assignment6.pdb
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.csproj.AssemblyReference.cache
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.csproj.SuggestedBindingRedirects.cache
-C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.Form1.resources
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.Properties.Resources.resources
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.csproj.GenerateResource.cache
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.csproj.CoreCompileInputs.cache
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.exe
 C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.pdb
+C:\Users\aisha\Documents\Module6\Assignment6\obj\Debug\Assignment6.MainForm.resources

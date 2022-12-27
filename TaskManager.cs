@@ -165,7 +165,7 @@ namespace Assignment6
         public bool ReadDataFromFile(string fileName)
         {
             FileManager fileManager = new FileManager();
-            return fileManager.ReadTaskListsFrFile(tasksList, fileName);
+            return fileManager.ReadTaskListFrFile(tasksList, fileName);
         }
     }
 }
