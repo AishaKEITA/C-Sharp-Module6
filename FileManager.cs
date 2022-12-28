@@ -9,10 +9,17 @@ namespace Assignment6
 {
     class FileManager
     {
+        //fields
         private const string fileVersionToken = "ToDoRe_21";
         private const double fileVersionNr = 1.0;
 
-
+        /// <summary>
+        /// method to save task list
+        /// and list of files
+        /// </summary>
+        /// <param name="tasklist"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public bool SaveTaskListToFile(List<Task> tasklist, string fileName)
         {
             bool ok = true;
@@ -50,7 +57,13 @@ namespace Assignment6
             }
             return ok;
         }
-
+        /// <summary>
+        /// method to read task list
+        /// and file names
+        /// </summary>
+        /// <param name="tasklist"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public bool ReadTaskListFrFile(List<Task> tasklist, string fileName)
         {
             bool ok = true;
