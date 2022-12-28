@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment6
 {
+    //enum for list of priority types
    public enum PriorityType
    {
         Very_important,
