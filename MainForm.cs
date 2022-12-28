@@ -12,6 +12,7 @@ namespace Assignment6
 {
     public partial class MainForm : Form
     {
+        //TeamManager constructor
         TaskManager taskManager;
 
         private string fileName = Application.StartupPath + "\\Task.txt"; //create a file name
@@ -21,6 +22,9 @@ namespace Assignment6
             InitializeGui();
         }
 
+        /// <summary>
+        /// method to initialize gui when the program starts
+        /// </summary>
         private void InitializeGui()
         {
             this.Text = "To do reminder designed by Aisha";
@@ -57,6 +61,11 @@ namespace Assignment6
              btnChange.Enabled = false;
              btnDelete.Enabled = false;
         }
+        /// <summary>
+        /// show text when form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "To do reminder designed by Aisha";
@@ -67,6 +76,13 @@ namespace Assignment6
 
         }
 
+        /// <summary>
+        /// method to add task
+        /// enable delete and delete button when add is clicked
+        /// then update gui
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Task task = ReadInput();
@@ -79,6 +95,10 @@ namespace Assignment6
             btnDelete.Enabled = true;
         }
 
+        /// <summary>
+        /// method to read user input
+        /// </summary>
+        /// <returns></returns>
         private Task ReadInput()
         {
             Task task = new Task();
@@ -96,6 +116,9 @@ namespace Assignment6
             return task;
         }
 
+        /// <summary>
+        /// method to update gui
+        /// </summary>
         private void UpdateGui()
         {
             lstTask.Items.Clear();
@@ -104,6 +127,12 @@ namespace Assignment6
                 lstTask.Items.AddRange(infoStrings);
         }
 
+        /// <summary>
+        /// method to exit when the user clicks exits
+        /// a prompt will show to confirm if the user wants to exit or not
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitAltF4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dlgResult = MessageBox.Show("Are you sure you want to exit?",
@@ -112,6 +141,11 @@ namespace Assignment6
                 Application.Exit();
         }
 
+        /// <summary>
+        /// method to open data file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -125,6 +159,11 @@ namespace Assignment6
                 UpdateGui();
         }
 
+        /// <summary>
+        /// method for the user to save data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveDataFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string errMessage = "something went wrong while saving data to file";
@@ -135,11 +174,22 @@ namespace Assignment6
                 MessageBox.Show("Data saved to file:" + Environment.NewLine + fileName);
         }
 
+        /// <summary>
+        /// intialize gui when open is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             InitializeGui();
         }
 
+        /// <summary>
+        /// method to change user input
+        /// by clicking the change button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnChange_Click(object sender, EventArgs e)
         {
             int index = lstTask.SelectedIndex;
@@ -171,6 +221,12 @@ namespace Assignment6
         {
 
         }
+
+        /// <summary>
+        /// method to select list box items
+        /// to delete the position of user task
+        /// </summary>
+        /// <returns></returns>
         private int lstBoxItemSelected()
         {
             int index = lstTask.SelectedIndex;
@@ -217,6 +273,11 @@ namespace Assignment6
 
         }
 
+        /// <summary>
+        /// display timer clock in the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblClock.Text = DateTime.Now.ToLongTimeString();
