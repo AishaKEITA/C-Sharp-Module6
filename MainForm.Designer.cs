@@ -46,6 +46,7 @@
             this.txtTodo = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBoxTodo = new System.Windows.Forms.GroupBox();
+            this.lblClock = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.lstTask = new System.Windows.Forms.ListBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblClock = new System.Windows.Forms.Label();
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -65,14 +65,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(664, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1328, 48);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -85,35 +86,35 @@
             this.saveDataFileToolStripMenuItem,
             this.exitAltF4ToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(71, 44);
             this.openToolStripMenuItem.Text = "File";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem1
             // 
             this.openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            this.openToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.openToolStripMenuItem1.Size = new System.Drawing.Size(299, 44);
             this.openToolStripMenuItem1.Text = "New";
             this.openToolStripMenuItem1.Click += new System.EventHandler(this.openToolStripMenuItem1_Click);
             // 
             // openDataToolStripMenuItem
             // 
             this.openDataToolStripMenuItem.Name = "openDataToolStripMenuItem";
-            this.openDataToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.openDataToolStripMenuItem.Size = new System.Drawing.Size(299, 44);
             this.openDataToolStripMenuItem.Text = "Open data file";
             this.openDataToolStripMenuItem.Click += new System.EventHandler(this.openDataToolStripMenuItem_Click);
             // 
             // saveDataFileToolStripMenuItem
             // 
             this.saveDataFileToolStripMenuItem.Name = "saveDataFileToolStripMenuItem";
-            this.saveDataFileToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.saveDataFileToolStripMenuItem.Size = new System.Drawing.Size(299, 44);
             this.saveDataFileToolStripMenuItem.Text = "Save data file";
             this.saveDataFileToolStripMenuItem.Click += new System.EventHandler(this.saveDataFileToolStripMenuItem_Click);
             // 
             // exitAltF4ToolStripMenuItem
             // 
             this.exitAltF4ToolStripMenuItem.Name = "exitAltF4ToolStripMenuItem";
-            this.exitAltF4ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.exitAltF4ToolStripMenuItem.Size = new System.Drawing.Size(299, 44);
             this.exitAltF4ToolStripMenuItem.Text = "Exit   Alt + F4";
             this.exitAltF4ToolStripMenuItem.Click += new System.EventHandler(this.exitAltF4ToolStripMenuItem_Click);
             // 
@@ -122,13 +123,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(84, 44);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(232, 44);
             this.aboutToolStripMenuItem.Text = "About....";
             // 
             // contextMenuStrip1
@@ -140,18 +141,20 @@
             // lblDateTimm
             // 
             this.lblDateTimm.AutoSize = true;
-            this.lblDateTimm.Location = new System.Drawing.Point(25, 46);
+            this.lblDateTimm.Location = new System.Drawing.Point(50, 88);
+            this.lblDateTimm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDateTimm.Name = "lblDateTimm";
-            this.lblDateTimm.Size = new System.Drawing.Size(77, 13);
+            this.lblDateTimm.Size = new System.Drawing.Size(152, 25);
             this.lblDateTimm.TabIndex = 1;
             this.lblDateTimm.Text = "Date and Time";
             this.lblDateTimm.Click += new System.EventHandler(this.lblDateTimm_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 43);
+            this.dateTimePicker1.Location = new System.Drawing.Point(244, 83);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(396, 31);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(2022, 12, 20, 14, 11, 11, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -159,9 +162,10 @@
             // lblPrority
             // 
             this.lblPrority.AutoSize = true;
-            this.lblPrority.Location = new System.Drawing.Point(353, 46);
+            this.lblPrority.Location = new System.Drawing.Point(706, 88);
+            this.lblPrority.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPrority.Name = "lblPrority";
-            this.lblPrority.Size = new System.Drawing.Size(36, 13);
+            this.lblPrority.Size = new System.Drawing.Size(74, 25);
             this.lblPrority.TabIndex = 3;
             this.lblPrority.Text = "Prority";
             // 
@@ -169,32 +173,36 @@
             // 
             this.comboBoxPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPriority.FormattingEnabled = true;
-            this.comboBoxPriority.Location = new System.Drawing.Point(412, 43);
+            this.comboBoxPriority.Location = new System.Drawing.Point(824, 83);
+            this.comboBoxPriority.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comboBoxPriority.Name = "comboBoxPriority";
-            this.comboBoxPriority.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPriority.Size = new System.Drawing.Size(238, 33);
             this.comboBoxPriority.TabIndex = 4;
             // 
             // lblToDo
             // 
             this.lblToDo.AutoSize = true;
-            this.lblToDo.Location = new System.Drawing.Point(25, 95);
+            this.lblToDo.Location = new System.Drawing.Point(50, 183);
+            this.lblToDo.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblToDo.Name = "lblToDo";
-            this.lblToDo.Size = new System.Drawing.Size(35, 13);
+            this.lblToDo.Size = new System.Drawing.Size(67, 25);
             this.lblToDo.TabIndex = 5;
             this.lblToDo.Text = "To do";
             // 
             // txtTodo
             // 
-            this.txtTodo.Location = new System.Drawing.Point(66, 88);
+            this.txtTodo.Location = new System.Drawing.Point(132, 169);
+            this.txtTodo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtTodo.Name = "txtTodo";
-            this.txtTodo.Size = new System.Drawing.Size(467, 20);
+            this.txtTodo.Size = new System.Drawing.Size(930, 31);
             this.txtTodo.TabIndex = 6;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(539, 88);
+            this.btnAdd.Location = new System.Drawing.Point(1078, 169);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(66, 20);
+            this.btnAdd.Size = new System.Drawing.Size(132, 38);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -211,20 +219,32 @@
             this.groupBoxTodo.Controls.Add(this.lblDate);
             this.groupBoxTodo.Controls.Add(this.lstTask);
             this.groupBoxTodo.ForeColor = System.Drawing.Color.IndianRed;
-            this.groupBoxTodo.Location = new System.Drawing.Point(12, 140);
+            this.groupBoxTodo.Location = new System.Drawing.Point(24, 269);
+            this.groupBoxTodo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBoxTodo.Name = "groupBoxTodo";
-            this.groupBoxTodo.Size = new System.Drawing.Size(609, 211);
+            this.groupBoxTodo.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxTodo.Size = new System.Drawing.Size(1218, 406);
             this.groupBoxTodo.TabIndex = 8;
             this.groupBoxTodo.TabStop = false;
             this.groupBoxTodo.Text = "To do";
             this.groupBoxTodo.Enter += new System.EventHandler(this.groupBoxTodo_Enter);
             // 
+            // lblClock
+            // 
+            this.lblClock.AutoSize = true;
+            this.lblClock.Location = new System.Drawing.Point(972, 335);
+            this.lblClock.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(0, 25);
+            this.lblClock.TabIndex = 7;
+            // 
             // btnDelete
             // 
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(323, 174);
+            this.btnDelete.Location = new System.Drawing.Point(646, 335);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(103, 21);
+            this.btnDelete.Size = new System.Drawing.Size(206, 40);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -233,9 +253,10 @@
             // btnChange
             // 
             this.btnChange.ForeColor = System.Drawing.Color.Black;
-            this.btnChange.Location = new System.Drawing.Point(140, 174);
+            this.btnChange.Location = new System.Drawing.Point(280, 335);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(103, 22);
+            this.btnChange.Size = new System.Drawing.Size(206, 42);
             this.btnChange.TabIndex = 5;
             this.btnChange.Text = "Change";
             this.btnChange.UseVisualStyleBackColor = true;
@@ -245,9 +266,10 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription.Location = new System.Drawing.Point(430, 21);
+            this.lblDescription.Location = new System.Drawing.Point(860, 40);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(60, 13);
+            this.lblDescription.Size = new System.Drawing.Size(120, 25);
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = "Description";
             // 
@@ -255,9 +277,10 @@
             // 
             this.lblLstPriority.AutoSize = true;
             this.lblLstPriority.ForeColor = System.Drawing.Color.Black;
-            this.lblLstPriority.Location = new System.Drawing.Point(274, 21);
+            this.lblLstPriority.Location = new System.Drawing.Point(548, 40);
+            this.lblLstPriority.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblLstPriority.Name = "lblLstPriority";
-            this.lblLstPriority.Size = new System.Drawing.Size(38, 13);
+            this.lblLstPriority.Size = new System.Drawing.Size(79, 25);
             this.lblLstPriority.TabIndex = 3;
             this.lblLstPriority.Text = "Priority";
             // 
@@ -265,9 +288,10 @@
             // 
             this.lblHour.AutoSize = true;
             this.lblHour.ForeColor = System.Drawing.Color.Black;
-            this.lblHour.Location = new System.Drawing.Point(190, 21);
+            this.lblHour.Location = new System.Drawing.Point(380, 40);
+            this.lblHour.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblHour.Name = "lblHour";
-            this.lblHour.Size = new System.Drawing.Size(30, 13);
+            this.lblHour.Size = new System.Drawing.Size(58, 25);
             this.lblHour.TabIndex = 2;
             this.lblHour.Text = "Hour";
             // 
@@ -275,32 +299,27 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(49, 21);
+            this.lblDate.Location = new System.Drawing.Point(98, 40);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(30, 13);
+            this.lblDate.Size = new System.Drawing.Size(57, 25);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "Date";
             // 
             // lstTask
             // 
             this.lstTask.FormattingEnabled = true;
-            this.lstTask.Location = new System.Drawing.Point(38, 37);
+            this.lstTask.ItemHeight = 25;
+            this.lstTask.Location = new System.Drawing.Point(76, 71);
+            this.lstTask.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.lstTask.Name = "lstTask";
-            this.lstTask.Size = new System.Drawing.Size(539, 121);
+            this.lstTask.Size = new System.Drawing.Size(1074, 229);
             this.lstTask.TabIndex = 0;
             this.lstTask.SelectedIndexChanged += new System.EventHandler(this.lstTask_SelectedIndexChanged);
             // 
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // lblClock
-            // 
-            this.lblClock.AutoSize = true;
-            this.lblClock.Location = new System.Drawing.Point(486, 174);
-            this.lblClock.Name = "lblClock";
-            this.lblClock.Size = new System.Drawing.Size(0, 13);
-            this.lblClock.TabIndex = 7;
             // 
             // clockTimer
             // 
@@ -310,9 +329,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 378);
+            this.ClientSize = new System.Drawing.Size(1328, 727);
             this.Controls.Add(this.groupBoxTodo);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtTodo);
@@ -323,7 +342,7 @@
             this.Controls.Add(this.lblDateTimm);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "To do reminder by ";
             this.Load += new System.EventHandler(this.Form1_Load);

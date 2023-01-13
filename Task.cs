@@ -98,7 +98,8 @@ namespace Assignment6
         /// <returns></returns>
         public override string ToString()
         {
-            string txtOut = $"{date.ToLongDateString(),-25} {GetTimeString(),12} {" ", 6} {GetPriorityString(),25} {description,40}";
+            string txtOut = $"{date.ToLongDateString(),-25} {GetTimeString(),12} " +
+                $"{" ", 6} {GetPriorityString(),25} {description,40}";
 
             return txtOut;
         }

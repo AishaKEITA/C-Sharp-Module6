@@ -96,6 +96,7 @@ namespace Assignment6
                         int hour = 0, minute = 0, second = 0;
 
                         year = int.Parse(reader.ReadLine());
+                        motnth = int.Parse(reader.ReadLine());
                         day = int.Parse(reader.ReadLine());
                         hour = int.Parse(reader.ReadLine());
                         minute = int.Parse(reader.ReadLine());
