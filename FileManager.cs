@@ -92,17 +92,17 @@ namespace Assignment6
                         task.Priority = (PriorityType)Enum.Parse(typeof(PriorityType), reader.ReadLine());
 
                         //read only objects
-                        int year = 0, motnth = 0, day = 0;
+                        int year = 0, month = 0, day = 0;
                         int hour = 0, minute = 0, second = 0;
 
                         year = int.Parse(reader.ReadLine());
-                        motnth = int.Parse(reader.ReadLine());
+                        month = int.Parse(reader.ReadLine());
                         day = int.Parse(reader.ReadLine());
                         hour = int.Parse(reader.ReadLine());
                         minute = int.Parse(reader.ReadLine());
                         second = int.Parse(reader.ReadLine());
 
-                        task.DateAndTime = new DateTime(year, motnth, day, hour, minute, second);
+                        task.DateAndTime = new DateTime(year, month, day, hour, minute, second);
 
                         tasklist.Add(task);
                     }
